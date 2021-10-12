@@ -1,0 +1,22 @@
+{% extends 'index.html' %}
+{% block contenido %}
+<div class="formulario">
+    <form action="{{ url_for('login') }}" method="POST" novalidate>
+        {{ form.hidden_tag() }}
+        <div class="grupo">
+            {{ form.usuario.label }}
+            {{ form.usuario(class="control") }}
+        </div>
+        <div class="grupo">
+            {{ form.password.label }}
+            {{ form.password(class="control") }}
+        </div>
+        <div class="grupo">
+            {{ form.ingresar(class="boton") }}
+        </div>
+        <p><a href="#">Olvidastes tu contraseña?</a></p>
+  
+    </form>
+</div>
+{% endblock %}
+    
